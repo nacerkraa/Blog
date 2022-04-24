@@ -17,6 +17,7 @@ class UsersController extends Controller
     }
 
     public function index(){
-        return User::all();
+        $data =  User::all();
+        return view('users', ['collection' =>$data]);
     }
 }
