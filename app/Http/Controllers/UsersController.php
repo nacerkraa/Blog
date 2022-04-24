@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class UsersController extends Controller
@@ -13,5 +13,9 @@ class UsersController extends Controller
         ]);
         $data = $req -> input();
         return "Hello " . $data['user'] . ", your password is: ". $data['password'];
+    }
+
+    public function index(){
+        return DB::select('select * from users');
     }
 }

@@ -22,5 +22,5 @@ Route::view('home', 'home');
 Route::view('admin', 'dashboard');
 Route::view('login', 'form');
 Route::post("users",[UsersController::class,'getData']);
-Route::view('articles', 'articles');
+Route::get("fetch",[UsersController::class,'index']);
 
