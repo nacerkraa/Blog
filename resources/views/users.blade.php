@@ -2,15 +2,19 @@
 
 <table border="1">
     <tr>
-        <td>id</td>
-        <td>name</td>
+        <td>email</td>
+        <td>first name</td>
+        <td>last name</td>
+        <td>age</td>
         <td>password</td>
     </tr>
 
     @foreach ($collection as $item)
     <tr>
-        <td>{{$item['id']}}</td>
-        <td>{{$item['name']}}</td>
+        <td>{{$item['email']}}</td>
+        <td>{{$item['firstname']}}</td>
+        <td>{{$item['lastname']}}</td>
+        <td>{{$item['age']}}</td>
         <td>{{$item['password']}}</td>
         
     </tr>
