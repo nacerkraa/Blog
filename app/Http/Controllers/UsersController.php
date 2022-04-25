@@ -9,7 +9,6 @@ class UsersController extends Controller
 
     public function index(){
         $data =  User::all();
-        echo session('user') . "<br><br>";
         return view('users', ['collection' =>$data]);
     }
 }
