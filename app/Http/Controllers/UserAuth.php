@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class UserAuth extends Controller
@@ -21,7 +21,7 @@ class UserAuth extends Controller
         ]);
         $data = $req -> input();
         $req = session() -> put('user', $data['user']);
-        echo session('user') . "<br><br>";
+        DB::table('users')->insert(['email'=> $data['email'],'firstname'=> $data['user'],'password'=>$data['password']]);
         return "Hello " . $data['user'] . ", your password is: ". $data['password'];
     }
 }
