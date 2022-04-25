@@ -1,6 +1,6 @@
 
 <h2>Login User</h2>
-<form action="users" method="POST">
+<form action="userRegister" method="POST">
     @csrf
     
         @error('user')

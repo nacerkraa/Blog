@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\UserAuth;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,16 @@ Route::get('/', function () {
 
 Route::view('home', 'home');
 Route::view('admin', 'dashboard');
-Route::view('login', 'form');
-Route::post("users",[UsersController::class,'getData']);
+Route::view('register', 'registerForm');
+Route::view('login', 'loginForm');
 Route::get("fetch",[UsersController::class,'index']);
+Route::post("userLogin",[UserAuth::class,'userLogin']);
+Route::post("userRegister",[UserAuth::class,'userRegister']);
+
+Route::get('/lougout', function () {
+    if (session() -> has('user')) {
+        session() -> pull('user');
+    }
+    return redirect('home');
+});
 
