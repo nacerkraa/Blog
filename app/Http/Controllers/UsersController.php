@@ -8,7 +8,7 @@ class UsersController extends Controller
 {
 
     public function index(){
-        $data =  User::all();
+        $data =  User::paginate(3);
         return view('users', ['collection' =>$data]);
     }
 }

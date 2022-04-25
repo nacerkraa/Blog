@@ -20,3 +20,13 @@
     </tr>
     @endforeach
 </table>
+
+<span>
+    {{$collection -> links()}}
+</span>
+
+<style>
+    .w-5{
+        display: none;
+    }
+</style>
