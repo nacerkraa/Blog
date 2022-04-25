@@ -23,6 +23,7 @@ Route::view('home', 'home');
 Route::view('admin', 'dashboard');
 Route::view('register', 'registerForm');
 Route::view('login', 'loginForm');
+Route::view('upload', 'upload');
 Route::get("fetch",[UsersController::class,'index']);
 Route::post("userLogin",[UserAuth::class,'userLogin']);
 Route::post("userRegister",[UserAuth::class,'userRegister']);
