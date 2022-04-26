@@ -16,7 +16,12 @@ class UserAuth extends Controller
 
     public function userRegister(Request $req){
 
-
+      $req -> validate([
+          'email' => 'required|email|unique:users,email',
+          'firstname' =>'required | max:10',
+          'lastname' =>'required | max:10',
+          'password' =>'required | min:5'
+      ]);
 
         $user = new User;
         $user -> email = $req -> email;
