@@ -24,10 +24,14 @@ Route::view('admin', 'dashboard');
 Route::view('register', 'registerForm');
 Route::view('login', 'loginForm');
 Route::view('upload', 'upload');
-Route::get("fetch",[UsersController::class,'index']);
+
 Route::post("userLogin",[UserAuth::class,'userLogin']);
 Route::post("userRegister",[UserAuth::class,'userRegister']);
-Route::get("delete/{id}",[UserAuth::class,'userDelete']);
+
+Route::get("list",[UsersController::class,'index']);
+Route::get("delete/{id}",[UsersController::class,'userDelete']);
+Route::get("update/{id}",[UsersController::class,'showData']);
+Route::post("update",[UsersController::class,'userUpdate']);
 
 Route::get('/lougout', function () {
     if (session() -> has('user')) {

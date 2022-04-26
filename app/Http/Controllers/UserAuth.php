@@ -40,12 +40,4 @@ class UserAuth extends Controller
         return "Hello " . $data['username'] ;
     }
 
-    public function userDelete($id){
-
-        $data = User::find($id);
-        $data -> delete();
-
-        return redirect('fetch');
-        
-    }
 }

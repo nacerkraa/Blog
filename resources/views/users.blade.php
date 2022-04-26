@@ -21,7 +21,10 @@
         <td>{{$item['email']}}</td>
         <td>{{$item['age']}}</td>
         <td>{{$item['password']}}</td>
-        <td><a href="delete/{{$item['id']}}">Delete</a></td>
+        <td>
+            <a href="delete/{{$item['id']}}">Delete</a>
+            <a href="update/{{$item['id']}}">Edit</a>
+        </td>
 
     </tr>
     @endforeach
