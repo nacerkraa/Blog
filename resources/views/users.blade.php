@@ -1,5 +1,5 @@
 <h1>This The list of Users</h1>
-
+<div>Hello {{session("user")}}</div>
 <table border="1">
     <tr>
         <td>email</td>
@@ -16,7 +16,7 @@
         <td>{{$item['lastname']}}</td>
         <td>{{$item['age']}}</td>
         <td>{{$item['password']}}</td>
-        
+
     </tr>
     @endforeach
 </table>
