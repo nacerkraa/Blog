@@ -27,6 +27,7 @@ Route::view('upload', 'upload');
 Route::get("fetch",[UsersController::class,'index']);
 Route::post("userLogin",[UserAuth::class,'userLogin']);
 Route::post("userRegister",[UserAuth::class,'userRegister']);
+Route::get("delete/{id}",[UserAuth::class,'userDelete']);
 
 Route::get('/lougout', function () {
     if (session() -> has('user')) {

@@ -12,4 +12,12 @@
     @endif
 </h3>
 
+<ul>
+    <li><a href="home">Home</a></li>
+    <li><a href="login">Login</a></li>
+    <li><a href="register">Register</a></li>
+    <li><a href="fetch">List Of Users</a></li>
+    <li><a href="upload">Upload</a></li>
+</ul>
+
 
