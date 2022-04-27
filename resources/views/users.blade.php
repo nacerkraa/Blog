@@ -1,5 +1,6 @@
 <h1>This The list of Users</h1>
 <div>Hello {{session("user")}}</div>
+<span><a href="/register">Add user</a></span>
 <table border="1">
     <tr>
         
