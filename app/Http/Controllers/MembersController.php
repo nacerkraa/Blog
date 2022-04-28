@@ -8,9 +8,14 @@ use App\Models\Member;
 
 class MembersController extends Controller
 {
-    public function userLogin(){
+    // show member by id
+    public function showlist(){
+        return Member::find(1) -> getQuestion;
+    }
 
-       
+    // login 
+
+    public function userLogin(){
         return "Hello this is login";
     }
 

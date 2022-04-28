@@ -29,6 +29,7 @@ Route::post("userLogin",[MembersController::class,'userLogin']);
 Route::post("userRegister",[MembersController::class,'MemberRegister']);
 
 Route::get("listQuesions",[QuestionsController::class,'showList']);
+Route::get("listMembers",[MembersController::class,'showList']);
 
 
 Route::get("list",[MembersController::class,'index']);

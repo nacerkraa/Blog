@@ -9,6 +9,7 @@ class QuestionsController extends Controller
 {
     public function showList(Type $var = null)
     {
-        return Question::all();
+        
+        return Question::find(1);
     }
 }
