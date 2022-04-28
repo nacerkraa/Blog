@@ -7,9 +7,9 @@ use App\Models\Question;
 
 class QuestionsController extends Controller
 {
-    public function showList(Type $var = null)
+    public function showList(Question $key)
     {
         
-        return Question::find(1);
+        return $key;
     }
 }

@@ -28,7 +28,7 @@ Route::view('upload', 'upload');
 Route::post("userLogin",[MembersController::class,'userLogin']);
 Route::post("userRegister",[MembersController::class,'MemberRegister']);
 
-Route::get("listQuesions",[QuestionsController::class,'showList']);
+Route::get("question/{key:title}",[QuestionsController::class,'showList']);
 Route::get("listMembers",[MembersController::class,'showList']);
 
 
