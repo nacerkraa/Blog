@@ -1,8 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsersController;
-use App\Http\Controllers\UserAuth;
+use App\Http\Controllers\MembersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +15,7 @@ use App\Http\Controllers\UserAuth;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('welcome');
 });
 
 Route::view('home', 'home');
@@ -25,13 +24,13 @@ Route::view('register', 'registerForm');
 Route::view('login', 'loginForm');
 Route::view('upload', 'upload');
 
-Route::post("userLogin",[UserAuth::class,'userLogin']);
-Route::post("userRegister",[UserAuth::class,'userRegister']);
+Route::post("userLogin",[MembersController::class,'userLogin']);
+Route::post("userRegister",[MembersController::class,'MemberRegister']);
 
-Route::get("list",[UsersController::class,'index']);
-Route::get("delete/{id}",[UsersController::class,'userDelete']);
-Route::get("update/{id}",[UsersController::class,'showData']);
-Route::post("update",[UsersController::class,'userUpdate']);
+Route::get("list",[MembersController::class,'index']);
+Route::get("delete/{id}",[MembersController::class,'userDelete']);
+Route::get("update/{id}",[MembersController::class,'showData']);
+Route::post("update",[MembersController::class,'userUpdate']);
 
 Route::get('/lougout', function () {
     if (session() -> has('user')) {
