@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MembersController;
+use App\Http\Controllers\QuestionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use App\Http\Controllers\MembersController;
 */
 
 Route::get('/', function () {
-    return redirect('welcome');
+    return redirect('home');
 });
 
 Route::view('home', 'home');
@@ -26,6 +27,9 @@ Route::view('upload', 'upload');
 
 Route::post("userLogin",[MembersController::class,'userLogin']);
 Route::post("userRegister",[MembersController::class,'MemberRegister']);
+
+Route::get("listQuesions",[QuestionsController::class,'showList']);
+
 
 Route::get("list",[MembersController::class,'index']);
 Route::get("delete/{id}",[MembersController::class,'userDelete']);
