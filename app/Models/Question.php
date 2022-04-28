@@ -10,8 +10,8 @@ class Question extends Model
     use HasFactory;
     public $timestamps = false;
 
-    public function getMember()
-    {
-        return $this->hasOne('App\Models\Member');
-    }
+    // public function getMember()
+    // {
+    //     return $this->hasOne('App\Models\Member');
+    // }
 }
