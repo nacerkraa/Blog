@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MembersController;
+use App\Http\Controllers\QuestionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +16,30 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('home');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::view('home', 'home');
+Route::view('admin', 'dashboard');
+Route::view('register', 'registerForm');
+Route::view('login', 'loginForm');
+Route::view('upload', 'upload');
 
-require __DIR__.'/auth.php';
+Route::post("userLogin",[MembersController::class,'userLogin']);
+Route::post("userRegister",[MembersController::class,'MemberRegister']);
+
+Route::get("question/{key:title}",[QuestionsController::class,'showList']);
+Route::get("listMembers",[MembersController::class,'showList']);
+
+
+Route::get("list",[MembersController::class,'index']);
+Route::get("delete/{id}",[MembersController::class,'userDelete']);
+Route::get("update/{id}",[MembersController::class,'showData']);
+Route::post("update",[MembersController::class,'userUpdate']);
+
+Route::get('/lougout', function () {
+    if (session() -> has('user')) {
+        session() -> pull('user');
+    }
+    return redirect('home');
+});
