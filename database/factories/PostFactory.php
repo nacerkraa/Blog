@@ -14,7 +14,9 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this -> faker -> sentance(rand(5, 10), true),
+            'content' => $this -> faker -> sentances(5, true),
+            'image' => 'https://via.placeholder.com/1000',
         ];
     }
 }
