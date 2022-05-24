@@ -3,6 +3,7 @@
 namespace Tests;
 
 use Illuminate\Contracts\Console\Kernel;
+//this is a commmont for pushing from phpsrtorm
 
 trait CreatesApplication
 {
