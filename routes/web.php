@@ -23,5 +23,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/admin', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('dashboard.blade.php');
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'dashboard'])->name('dashboard');
 
