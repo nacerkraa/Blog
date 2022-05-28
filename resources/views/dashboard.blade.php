@@ -1,1 +1,1 @@
-<h1>Hello Admin</h1>
+<h1>This is dashboard</h1>
