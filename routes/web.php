@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('home', [UserController::class, 'index'])->name('user.index');
+Route::get('articles', [ArticleController::class, 'index'])->name('article.index');
 
 
