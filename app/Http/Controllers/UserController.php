@@ -10,4 +10,9 @@ class UserController extends Controller
     {
         return view('home');
     }
+
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
 }
