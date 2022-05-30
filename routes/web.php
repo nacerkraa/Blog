@@ -20,7 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('home', [UserController::class, 'index'])->name('user.index');
-Route::get('about', [UserController::class, 'about'])->name('user.about');
 Route::get('admin', [UserController::class, 'dashboard'])->name('admin.dashboard');
 Route::get('articles', [ArticleController::class, 'index'])->name('article.index');
 
