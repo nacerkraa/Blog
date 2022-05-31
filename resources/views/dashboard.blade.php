@@ -1,1 +1,2 @@
-<h1>This is dashboard-78</h1>
+<div>Hello {{session("user")}}</div>
+<h2>This is Dashboard</h2>

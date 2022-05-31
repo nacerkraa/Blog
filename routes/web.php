@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\MembersController;
+use App\Http\Controllers\QuestionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +19,27 @@ Route::get('/', function () {
     return redirect('home');
 });
 
-Route::get('home', [UserController::class, 'index'])->name('user.index');
-Route::get('admin', [UserController::class, 'dashboard'])->name('admin.dashboard');
-Route::get('articles', [ArticleController::class, 'index'])->name('article.index');
+Route::view('home', 'home');
+Route::view('admin', 'dashboard');
+Route::view('register', 'registerForm');
+Route::view('login', 'loginForm');
+Route::view('upload', 'upload');
+
+Route::post("userLogin",[MembersController::class,'userLogin']);
+Route::post("userRegister",[MembersController::class,'MemberRegister']);
+
+Route::get("question/{key:title}",[QuestionsController::class,'showList']);
+Route::get("listMembers",[MembersController::class,'showList']);
 
 
+Route::get("list",[MembersController::class,'index']);
+Route::get("delete/{id}",[MembersController::class,'userDelete']);
+Route::get("update/{id}",[MembersController::class,'showData']);
+Route::post("update",[MembersController::class,'userUpdate']);
+
+Route::get('/lougout', function () {
+    if (session() -> has('user')) {
+        session() -> pull('user');
+    }
+    return redirect('home');
+});

@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Member extends Model
+class Question extends Model
 {
     use HasFactory;
     public $timestamps = false;
 
-    public function getQuestion()
-    {
-        return $this->hasMany('App\Models\Question');
-    }
+    // public function getMember()
+    // {
+    //     return $this->hasOne('App\Models\Member');
+    // }
 }
