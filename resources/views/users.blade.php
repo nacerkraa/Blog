@@ -3,7 +3,6 @@
 <span><a href="/register">Add user</a></span>
 <table border="1">
     <tr>
-        
         <td>User name</td>
         <td>First name</td>
         <td>Last name</td>
