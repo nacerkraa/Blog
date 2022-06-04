@@ -17,6 +17,8 @@ class MembersController extends Controller
 
     public function userLogin(Request $req){
         $username = $req -> user;
+        $password = $req -> password;
+        
         $member = Member::where('username', '=', $username)->first();
         if ($member === null) {
             return "user dosn't exist";
