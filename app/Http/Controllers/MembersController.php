@@ -13,11 +13,20 @@ class MembersController extends Controller
         return Member::find(1) -> getQuestion;
     }
 
-    // login 
+    // cheack if record exist
 
-    public function userLogin(){
-        return "Hello this is login";
+    public function userLogin(Request $req){
+        $username = $req -> user;
+        $member = Member::where('username', '=', $username)->first();
+        if ($member === null) {
+            return "user dosn't exist";
+        }
+
+        return redirect('home');
+       
     }
+
+    
 
     // add data
 
