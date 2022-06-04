@@ -37,7 +37,7 @@ Route::get("delete/{id}",[MembersController::class,'userDelete']);
 Route::get("update/{id}",[MembersController::class,'showData']);
 Route::post("update",[MembersController::class,'userUpdate']);
 
-Route::get('/lougout', function () {
+Route::get('/logout', function () {
     if (session() -> has('user')) {
         session() -> pull('user');
     }
