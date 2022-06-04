@@ -3,7 +3,7 @@
 <h3>
     @if(session()->has('user'))
         <div>Hello your name is {{session("user")}}</div>
-        <a href="/lougout">Lougout</a>
+        <a href="/lougout">Logout</a>
     @else 
         <div>There is no user yet</div>
 
