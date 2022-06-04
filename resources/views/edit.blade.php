@@ -33,5 +33,5 @@
     @enderror
     <input type="password" name="password" placeholder="Enter Your password" value="{{$data['password']}}"><br><br>
     <input type="number" name="age" placeholder="Enter Your age" value="{{$data['age']}}" autocomplete="off"><br><br>
-    <button type="submit">Register</button>
+    <button type="submit">Save</button>
 </form>
