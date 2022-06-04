@@ -1,4 +1,4 @@
-<h1>Edit Member</h1>
+<h1>Edit Members</h1>
 
 <form action="/update" method="POST">
     @csrf
