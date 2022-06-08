@@ -12,6 +12,8 @@ first you need to clone the repository with the following command.
 ```
 git clone https://github.com/nacerkraa/Blog.git
 ```
+now create a copy of the file called *.env.example*, edit the database name and username and password, rename the file to *.env*
+
 then open a PowerShell or Command Prompt and execute the following command
 ```
 cd PATH_TO_DIRECTORY
