@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <h1>This The list of Users</h1>
 <div>Hello {{session("user")}}</div>
 <span><a href="/register">Add user</a></span>
@@ -39,3 +42,4 @@
         display: none;
     }
 </style>
+@endsection

@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <h1>Edit Members</h1>
 
 <form action="/update" method="POST">
@@ -35,3 +38,4 @@
     <input type="number" name="age" placeholder="Enter Your age" value="{{$data['age']}}" autocomplete="off"><br><br>
     <button type="submit">Save</button>
 </form>
+@endsection

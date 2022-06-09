@@ -1,6 +1,7 @@
+@extends('layouts.app')
 
+@section('content')
 <h2>Register User</h2>
-
 
 <form action="userRegister" method="post">
     @csrf
@@ -34,3 +35,4 @@
     <input type="number" name="age" placeholder="Enter Your age" autocomplete="off"><br><br>
     <button type="submit">Register</button>
 </form>
+@endsection
