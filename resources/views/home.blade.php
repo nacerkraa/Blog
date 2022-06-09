@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <h2>This is home page</h2>
 
 <h3>
@@ -19,5 +22,4 @@
     <li><a href="list">List Of Users</a></li>
     <li><a href="upload">Upload</a></li>
 </ul>
-
-
+@endsection

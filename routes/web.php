@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MembersController;
 use App\Http\Controllers\QuestionsController;
+use App\Http\Controllers\AppController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,7 @@ Route::get('/', function () {
     return redirect('home');
 });
 
-Route::view('home', 'home');
+Route::get('/home',[AppController::class, 'index'])->name('home');
 Route::view('admin', 'dashboard');
 Route::view('register', 'registerForm');
 Route::view('login', 'loginForm');
