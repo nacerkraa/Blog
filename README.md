@@ -21,3 +21,8 @@ composer install
 npm install
 npm run dev
 ```
+
+finally generate the application encryption key with the following command:
+```
+php artisan key:generate
+```
