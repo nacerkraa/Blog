@@ -6,8 +6,8 @@
         <a href="/logout">Logout</a>
     @else 
         <div>There is no user yet</div>
-        <a href="/register">Register</a>
         <a href="/login">Login</a>
+        <a href="/register">Register</a>
     @endif
 </h3>
 
